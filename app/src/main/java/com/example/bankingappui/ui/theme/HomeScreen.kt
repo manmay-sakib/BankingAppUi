@@ -13,7 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.bankingappui.Screen
+import com.example.Screen
 
 @Composable
 fun HomeScreen(
@@ -26,7 +26,10 @@ fun HomeScreen(
     ){
       Text(
          modifier = Modifier.clickable {
-             navController.navigate(route = Screen.Detail.route)
+             navController.navigate(route = Screen.Detail.passNameAndId(
+                 id = 10,
+                 name = "Sakib"
+             ))
          },
 
           text = "Home",
